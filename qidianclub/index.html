@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.jsdelivr.cn/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+    <script src="https://cdn.jsdelivr.cn/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+        /*去除样式*/
+        body,ul,li{
+            list-style:none;
+            padding: 0px;
+            margin: 0px;
+        }
+        /*头部标签*/
+        header{
+            height: 60px;
+
+            border-bottom:1px solid rgba(255,255,255,0.5);
+
+        }
+        .header>section{
+
+            height: 60px;
+        }
+        .banner{
+            height: 500px;
+            width: 100%;
+            position: relative;
+            top: -170px;
+            left: 0px;
+            background: url("./static/img/header.png") center no-repeat;
+            background-size: cover;
+            z-index: -1;
+        }
+        .header>section{
+
+            height: 60px;
+            text-align: center;
+            line-height: 60px;
+        }
+        .header>section:first-child>img{
+            position: relative;
+
+            height: 60px;
+        }
+        /*链接*/
+        .header>section:nth-child(2)>ul{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+        .header>section:nth-child(2)>ul>li>a{
+            color: white;
+            font-weight: bold;
+            font-size: 17px;
+        }
+        .header>section:nth-child(2)>ul>li>a>img{
+            height: 15px;
+        }
+        .header>section:nth-child(3)>ul>li>a{
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        #iconfont>img{
+            height: 30px;
+        }
+        .header>section:first-child{
+            text-align: left;
+        }
+        .header>section:last-child{
+            text-align: right;
+        }
+
+        /*导航*/
+        nav{
+
+            width: 60%;
+            height: 70px;
+            margin: 0 auto;
+            border: 1px solid rgba(58, 173, 161, 0.54);
+            background: rgba(255,255,255,0.47);
+            box-shadow: 0px 0px 6px 5px rgba(255,255,255,0.7);
+            border-radius: 10px;
+            margin-bottom: 30px;
+
+        }
+
+        /*内容*/
+        .content{
+            text-align: center;
+        }
+        .content>section:first-child>div{
+            font-size: 2em;
+            font-weight: bold;
+            background: url("./static/img/lemon_bg.png") no-repeat center;
+        }
+        .content>section:first-child>p{
+            font-size:2ex;
+            padding: 20px 0px;
+
+        }
+
+      /* 标签*/
+        .content>section:nth-child(2)>section{
+
+        }
+        .content>section:nth-child(2)>section>section>img{
+            width:88%;
+            height: 88%;
+            margin-top: 10px;
+        }
+        .content>section:nth-child(2)>section>section>section>h6{
+            background: pink;
+            color: #fff;
+            font-size: 2em;
+            padding:10px 20px;
+            border-radius: 6px;
+
+        }
+        .content>section:nth-child(2)>section>section>ul{
+            /*border: 1px solid #000000;*/
+        }
+
+        .brief>ul>li:first-child{
+            color: rgba(255, 84, 84, 0.85);
+            padding: 6px ;
+            font-size:2.1em;
+        }
+        .brief>ul>li:nth-child(2){
+
+            font-size:1.2em;
+        }
+        .brief>ul>li:last-child{
+            font-size: 1.3em;
+            padding: 6px ;
+
+        }
+
+        .content>section:nth-child(2)>section>section{
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            margin:7px
+
+        }
+
+        .content>section:nth-child(2)>section>section:hover{
+            box-shadow: 5px 5px 5px #ccc,-5px 5px 5px #ccc;
+            transform:translatey(-9px);
+
+        }
+        .more{
+            margin-top: 50px;
+        }
+
+        .more>a{
+            width: 40%;
+            padding: 15px 40px ;
+            font-size: 16px ;
+            font-weight: bold;
+            color: #ffffff;
+            background: #234391 ;
+            border-radius: 10px;
+
+        }
+        .intro{
+            margin: 12px 0px;
+        }
+/*底部区域*/
+        footer{
+            margin-top: 40px;
+            height: 370px;
+            border-top:1px solid #dcdcdc;
+            margin-bottom: 30px;
+        }
+        footer>section:last-child{
+            text-align: center;
+            align-items: center;
+
+        }
+        footer>section:first-child{
+            height: 350px;
+
+            margin-bottom: 20px;
+        }
+        footer>section>section>article{
+
+            height: 350px;
+        }
+
+      /*  底部第一块*/
+        .footerIntro>article>img{
+            width: 30%;
+            position: relative;
+            top: 0px;
+            padding-bottom: 20px;
+            padding-top: 10px;
+            left: calc(50% - 30% / 2);
+        }
+        .footerIntro>article>p{
+            padding: 0px 15px;
+            font-size: 14px;
+            color: #707070;
+            text-indent: 2em;
+        }
+        .d-flex{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+      /*  地中的排序*/
+        .footerList>div>h6{
+            padding: 10px 0px;
+
+            font-size: 18px;
+            font-weight: bold;
+            color: #4b4b4b;
+        }
+        .footerList>div>ul>li{
+            text-align: center;
+            line-height: 30px;
+        }
+        .footerList>div>ul>li>a{
+            color: #707070;
+        }
+        .c-d-flex>img{
+
+        }
+        .QRcode-flex{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+
+      @media screen and (max-width:760px) {
+          header {
+              border-bottom: none;
+          }
+
+          .content > section:first-child > div {
+              font-size: 0.9em;
+          }
+          nav{
+              width: 90%;
+          }
+
+      }
+      @media screen and (max-width: 960px) {
+          footer>section>section>article:last-child{
+              height: auto;
+          }
+      }
+
+
+    </style>
+</head>
+<body>
+    <header class="container">
+        <section class="row header">
+            <section class="col-xs-6 col-sm-6 col-md-2 col-lg-2"  >
+                <img src="static/img/logo.png" alt="">
+            </section>
+            <section class="hidden-xs hidden-sm col-md-8 col-lg-8" >
+                <ul>
+                    <li>
+                        <a href="#">
+                            竞赛教程<img src="./static/img/down.png"/></a>
+                    </li>
+                    <li><a>国防七子</a></li>
+                    <li><a>硕果丰存</a></li>
+                    <li><a>开源文档</a></li>
+                    <li><a>科研网站平台</a></li>
+                    <li><a>高校链接</a></li>
+                    <li><a href="https://github.com/">github</a></li>
+
+
+                </ul>
+
+
+            </section>
+            <section class="hidden-xs hidden-sm col-md-2 col-lg-2" >
+                <ul>
+                    <li><a href="#">注册/登录</a></li>
+                </ul>
+            </section>
+            <section class="col-xs-6 col-sm-6 hidden-md hidden-lg" >
+                <i id="iconfont"><img src="./static/img/list.png"></i>
+            </section>
+        </section>
+    </header>
+    <nav class="container">
+    </nav>
+
+
+    <section class="banner container-fluid"></section>
+
+      <!--        内容区域-->
+    <section class="container content">
+        <section class="row">
+            <div class="col-12">子曰：“学而时习之，不亦说乎？有朋自远方来，不亦乐乎？人不知而不愠，不亦君子乎？</div>
+            <p>分享&热爱</p>
+        </section>
+<!--三个标签-->
+        <section class=" row">
+            <section class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <section>
+                <img src="./static/img/img01.png">
+                <section class="row" >
+                    <h6 class="col-xs-10 col-sm-10 col-md-10 col-lg-10 col-xs-push-1 col-sm-push-1 col-md-push-1 col-lg-push-1">中小学</h6>
+                </section>
+                <section class="brief">
+                    <ul>
+                        <li>青少年</li>
+                        <li>青少年发展</li>
+                        <li>为中华崛起而读书</li>
+
+                    </ul>
+                </section>
+                <section class="intro">
+                    今日之责任，不在他人，而全在我少年。少年智则国智，少年富则国富；少年强则国强，少年独立则国独立；少年自由则国自由；少年进步则国进步；
+                </section>
+
+                </section>
+
+            </section>
+            <section class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <section>
+                    <img src="./static/img/img01.png">
+                    <section class="row" >
+                        <h6 class="col-xs-10 col-sm-10 col-md-10 col-lg-10 col-xs-push-1 col-sm-push-1 col-md-push-1 col-lg-push-1">大学</h6>
+                    </section>
+                    <section class="brief">
+                        <ul>
+                            <li>大学</li>
+                            <li>大学生及研究生</li>
+                            <li>伟大复兴的中国梦</li>
+
+                        </ul>
+                    </section>
+                    <section class="intro">
+                        世界是你们的，也是我们的，但是归根结底是你们的。你们青年人朝气蓬勃，正在兴旺时期，好像早晨八、九点钟的太阳。希望寄托在你们身上。
+                    </section>
+
+                </section>
+
+            </section>
+            <section class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <section>
+                    <img src="./static/img/img01.png">
+                    <section class="row" >
+                        <h6 class="col-xs-10 col-sm-10 col-md-10 col-lg-10 col-xs-push-1 col-sm-push-1 col-md-push-1 col-lg-push-1">企业</h6>
+                    </section>
+                    <section class="brief">
+                        <ul>
+                            <li>各界人士</li>
+                            <li>各界人士</li>
+                            <li>人的价值是由自己决定的</li>
+
+                        </ul>
+                    </section>
+                    <section class="intro">
+                        燧石受到的敲打越厉害，发出的光就越灿烂。梦想的内容与现实之间是有关联的，梦想改变着现实，现实生活也在不断改变着梦想。
+                    </section>
+
+                </section>
+
+            </section>
+        </section>
+
+
+        <section class="more">
+            <a href="">查看更多</a>
+        </section>
+
+    </section>
+
+
+    <!--底部区域-->
+    <footer class="container-fluid">
+        <section class="container">
+            <section class="row footerIntro">
+                <article class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+                    <img src="./static/img/logo.png">
+                    <p>我们平时说的CPU，如高通msm7227，德州仪器omap3630，高通msm8255，三星sp5c110(蜂鸟)，联发科mtk6575，英伟达tegra2，德州仪器omap4430/4460，高通msm8260/8660， 三星Exynos4210(猎户座)，其实不仅仅包括CPU，我们平时说的CPU，如高通msm7227，德州仪器omap3630，高通msm8255，三星sp5c110(蜂鸟)，联发科mtk6575，英伟达tegra2，
+
+                        </p>
+                </article>
+                <article class="hidden-xs hidden-sm col-md-4 col-lg-4 d-flex footerList">
+                    <div>
+                        <h6>新手指南</h6>
+                        <ul>
+                            <li><a href="">挑选课程</a></li>
+                            <li><a href="">挑选课程</a></li>
+                            <li><a href="">挑选课程</a></li>
+                            <li><a href="">挑选课程</a></li>
+
+                        </ul>
+                    </div>
+                    <div>
+                        <h6>新手指南</h6>
+                        <ul>
+                            <li><a href="">挑选课程</a></li>
+                            <li><a href="">挑选课程</a></li>
+                            <li><a href="">挑选课程</a></li>
+                            <li><a href="">挑选课程</a></li>
+
+                        </ul>
+                    </div>
+                    <div>
+                        <h6>新手指南</h6>
+                        <ul>
+                            <li><a href="">挑选课程</a></li>
+                            <li><a href="">挑选课程</a></li>
+                            <li><a href="">挑选课程</a></li>
+                            <li><a href="">挑选课程</a></li>
+
+                        </ul>
+                    </div>
+
+                </article>
+                <article class="col-xs-12 col-sm-12 col-md-3 col-lg-3 QRcode-flex">
+                    <img src="./static/img/QRcode.png">
+
+                </article>
+
+            </section>
+        </section>
+        <section class="container">甘公网安备 35020302033304号 甘ICP备17012162号</section>
+    </footer>
+<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+<script src="https://cdn.jsdelivr.cn/npm/jquery@1.12.4/dist/jquery.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+</body>
+</html>
